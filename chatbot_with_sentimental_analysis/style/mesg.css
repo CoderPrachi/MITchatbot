@@ -1,0 +1,387 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  box-sizing: border-box;
+  
+}
+#wrapper {
+  display: flex;
+  
+}
+/* due all div in wrapper and wrapper have display flex property all 
+lefrt main right conatiner are  comming in same line  */
+.leftside {
+  display: flex;
+  /* justify-content: center; */
+width: 300px;
+  padding: 20px;
+  background-color: #f5f5fb;
+  border-radius: 5px;
+
+  margin-top: 70px;
+  border-radius: 10px 10px 10px 10px;
+  /* align-items: center; */
+  /* justify content and align-items: center;  causing the 
+  left side bar content to middel to commented it out */
+}
+
+.leftside .propfile_img {
+  margin-top: 70px !important;
+  border-radius: 50%;
+  width: 140px;
+  margin: 0px auto;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.051);
+  /* for img this add the shadow ==> rgba(0,0,0means black and last is opacity 
+  percentage 1 = 100% */
+}
+
+.leftside ul {
+  text-align: center;
+}
+
+.leftside ul li {
+  text-align: left;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.leftside h3 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.leftside .nav__email {
+  color: #ccc;
+}
+.nav__menuitem {
+  margin-top: 20px;
+}
+
+.nav__menuitem a {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.575);
+  text-decoration: none;
+}
+
+.nav__menuitem a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.active a {
+  color: rgb(0, 0, 0);
+}
+
+.nav__footer {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  margin: 0px auto;
+  background-color: #f5f5fb;
+  height: 100px;
+  padding: 10px;
+  color: #0a5ad1;
+}
+
+.btn__color {
+  background-color: #5e81f4 !important;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+.main {
+  flex: 1;
+  height: 100vh;
+}
+/* flex 1 to main content make it superior 
+and take all the available space so ye middle ki sab space le leta hai 
+and right side bar ko last me push krta hai */
+
+.rightside {
+  max-width: 305px;
+  width: 100%;
+  background-color: #f5f5fb;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 70px;
+}
+/* this is right side bar jski width hai 300px */
+.rightside .nav {
+  align-items: center;
+}
+.rightside .music_player {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+.music_player h1 {
+  margin-top: 30px;
+  text-shadow: 2px 2px 2px rgba(167, 164, 192, 0.623);
+}
+
+.music_player span {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.rightside img {
+  width: 150px;
+  height: 150px;
+  margin-top: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid rgba(48, 14, 202, 0.918)
+}
+
+.controller .fa {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.animate {
+  animation: rotateplayer 5s linear infinite;
+}
+
+@keyframes rotateplayer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.controller {
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.controller .fa {
+  font-size: 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+.controller .fa:hover {
+  color: rgba(60, 0, 255, 0.514);
+  font-size: 30px;
+}
+
+
+
+
+
+#chat-bubble {
+  height: 90%;
+  overflow: hidden;
+  min-width: 60%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 2px solid #3535c7;
+}
+
+#chat-bubble.open {
+  min-height: 350px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 25px;
+  z-index: 10;
+  position: relative;
+  padding: 8px;
+  box-shadow:  0 2px 1px rgba(39, 8, 175, 0.582);
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in;
+}
+
+.chat-header:hover {
+  background-color: #f7f7f7;
+}
+
+.user-avatar {
+  display: flex;
+  flex: 1;
+
+}
+
+.user-avatar img {
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.user-avatar .img-container {
+  position: relative;
+  
+
+}
+
+.user-avatar .img-container::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #1ba71b;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  border: 2px solid rgb(60, 15, 182);
+}
+
+.user-avatar .user-status-info a {
+  font-size: 13px;
+  margin: 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+
+}
+
+.user-avatar .user-status-info p {
+  font-size: 11px;
+  color: gray;
+} 
+
+.chat-comm {
+  display: none;
+}
+
+#chat-bubble.open .chat-comm {
+  display: block;
+}
+
+.chat-comm a {
+  text-decoration: none;
+}
+
+.chat-comm a:not(:last-child) {
+  margin-right: 8px;
+}
+
+.chat-body {
+  padding: 8px;
+}
+
+.sender-other .user-avatar .img-container img {
+  width: 25px;
+}
+
+.sender-other .user-avatar .img-container::after {
+  width: 7px;
+  height: 7px;
+  right: 4px;
+  bottom: 6px;
+}
+
+.sender-other .other-message {
+  background-color: #f1f0f0;
+  border-radius: 25px;
+  padding: 8px 11px;
+  font-size: 14px;
+  width : 80%;
+  height : 400px;
+  overflow: scroll;
+
+  
+}
+
+.sender-me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+}
+
+.sender-me .my-message {
+  background-color: #3578e5;
+  color: #fff;
+  border-radius: 25px;
+  padding: 8px 11px;
+  font-size: 14px;
+}
+
+.sender-me .seen-at {
+  display: flex;
+  align-items: center;
+  color: #90949C;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.sender-me .seen-at img.check {
+  width: 12px;
+  margin-right: 4px;
+}
+
+.chat-footer {
+  border-top: 1px solid #e4e4e4;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.chat-footer input[type=textarea] {
+  width: 100%;
+  border: none;
+  padding: 0 8px;
+}
+
+.chat-footer svg path {
+  fill: #bec2c9;
+}
+
+.chat-footer input[type=textarea]:focus {
+  outline: none;
+}
+.chat-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.chat-media a{
+  text-decoration: none;
+}
+
+
+.chat-media a:not(:last-child) {
+  margin-right: 8px;
+}
+
+.chat-media img {
+  width: 18px;
+}
+
+.chat-media img.game {
+  width: 20px;
+}
+
+.chat-media img.attach {
+  width: 14px;
+}
+
+.chat-media img.camera {
+  width: 16px;
+}
+.chat-media a:hover{
+  color:rgb(0, 0, 0);
+}
+.chatmessages {
+  padding-top: 20px;
+
+}
+#name{
+  color: #000;
+}

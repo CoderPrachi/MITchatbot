@@ -1,0 +1,19 @@
+.login{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   
+}
+body {
+    background-image: url('/images/background4.jpg');
+    background-repeat: no-repeat;
+    
+  }
+  .nav-item
+{
+ padding-left: 0%;
+ margin-left: 100px;
+background-color: white;
+font-size: 15px;
+font-weight: 600;
+}
